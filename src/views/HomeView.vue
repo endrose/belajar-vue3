@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import type { RecommendStatus } from '../types';
+import type { RecommendStatus, Dish } from '../types';
 import { restaurantstatusList } from '../constants';
 
 /**  
@@ -44,13 +44,9 @@ interface Restaurant {
   dishes?: Dish[]
 }
 
-interface Dish {
-  name?: string,
-  diet?: Diet,
-  status?: RecommendStatus
-}
 
-type Diet = | 'vegerarian' | 'vegan' | 'gluten-free' | 'pescatarian' | 'lactose-free' | 'other'
+
+
 
 // type RecommendStatus = typeof restaurantstatusList[number]
 
